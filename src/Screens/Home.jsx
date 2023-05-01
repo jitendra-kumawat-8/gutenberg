@@ -8,9 +8,6 @@ import history from "../Assets/History.svg";
 import adventure from "../Assets/Adventure.svg";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import {QueryClient} from "react-query";
-
-const queryClient = new QueryClient();
 
 export default function Home() {
   const navigate = useNavigate(); 

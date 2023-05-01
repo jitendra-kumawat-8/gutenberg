@@ -12,7 +12,7 @@ export default function TextBox(props) {
     <div className="text-box-div">
       <img src = {search} onClick={(e)=>{handleSearch(e, inputRef.current.value);handleClear()}}></img>
       <input className="text-box" name="book" type="search" id="textBox" ref={inputRef} placeholder="Search" ></input>
-      <img id="cancel-button" src = {cancel} onClick={handleClear}></img>
+      <img id="cancel-button" src = {cancel} alt="cancel" onClick={handleClear}></img>
     </div>
   );
 }

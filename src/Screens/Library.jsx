@@ -8,7 +8,6 @@ import { useNavigate, useLocation } from "react-router";
 const queryClient = new QueryClient();
 
 export default function Library() {
-  let fetching;
   const handleSearch = (e, book) => { // callback for search button
     const encodedQuery = encodeURIComponent(book); //encoding book name so it can be appended to the API
     queryClient.clear(); //clearing data cache
@@ -28,9 +27,7 @@ export default function Library() {
   ); // sets URL as soon as this screen is loaded 
   const {
     isLoading,
-    isError,
     data,
-    error,
     refetch,
     isFetching,
     hasNextPage,
@@ -51,16 +48,11 @@ export default function Library() {
   //functionality of the website with a callback function fetchinifinitebooks defined above
 
   useEffect(() => {
-    queryClient.invalidateQueries({ queryKey: ["books"] });
-    refetch({ pageParam: 1 });
-  }, [url]); //re renders components and refetches query when URL is changed, specifically by the search box
+    refetch();
+  }, [refetch,url]); //re renders components and refetches query when URL is changed, specifically by the search box
 
   useEffect(() => {
-    refetch({ pageParam: 1 });
-  }, [genre]); 
-
-  useEffect(() => {
-    fetching = false; //sets initial value of fetching to be false
+    let fetching = false; //sets initial value of fetching to be false
     const onScroll = async (event) => {
       const { scrollHeight, scrollTop, clientHeight } =
         event.target.scrollingElement; // extracts the three properties from client screen
@@ -76,14 +68,14 @@ export default function Library() {
     return () => {
       document.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [fetchNextPage, hasNextPage]);
 
   return (
     <div className="library">
       <section className="top-section-library">
         <div className="heading-box">
           <div className="library-heading">
-            <img
+            <img alt="back icon"
               src={back}
               onClick={() => {
                 navigate(-1);
