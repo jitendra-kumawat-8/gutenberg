@@ -1,0 +1,123 @@
+body {
+  font-family: "montserrat", "regular";
+}
+
+.library {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+.top-section-library {
+  background-color: white;
+  flex: 3;
+}
+
+.bottom-section-library {
+  background-color: #f8f7ff;
+  flex: 7;
+}
+
+.heading-box {
+  padding: 0 150px;
+  margin: 80px auto 10px;
+}
+.library-heading {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  align-items: center;
+}
+.library-heading-genre {
+  font-family: "montserrat-semi-bold";
+  color: #5e56e7;
+  padding: 0;
+  margin: 0;
+  margin: 0 10px;
+}
+
+.grid-library {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px 30px;
+  margin: 20px 200px;
+}
+
+@media screen and (max-width : 500px){
+  .heading-box {
+    padding: 0 50px;
+    margin: 80px auto 10px;
+  }
+}
+
+@media screen and (max-width : 1200px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 200px;
+  }
+}
+
+@media screen and (max-width : 1024px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 200px;
+  }
+}
+
+@media screen and (max-width : 992px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 200px;
+  }
+}
+
+@media screen and (max-width : 800px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 170px;
+  }
+}
+
+@media screen and (max-width : 680px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 150px;
+  }
+}
+
+@media screen and (max-width : 533px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 30px;
+    margin: 20px 100px;
+  }
+}
+
+@media screen and (max-width : 430px) {
+  .grid-library {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px 0;
+    margin: 20px 120px;
+  }
+}

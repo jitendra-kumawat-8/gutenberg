@@ -1,0 +1,23 @@
+.rectangle{
+    min-width: 114px;
+    max-width: 114px;
+    min-height: 162px;
+    max-height: 162px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+}
+.book-card{
+    display: inline-block;
+}
+.book-text{
+    font-size: 12px;
+    max-width: 110px;
+    padding-left: 0;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.author{
+    color: #A0A0A0;
+}

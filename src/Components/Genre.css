@@ -1,0 +1,28 @@
+.genre-card{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+    font-family: 'montserrat-semi-bold';
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p{
+    padding: 0 10px;
+}
+img{
+    max-width: 100%;
+    height: 21px;
+}
+

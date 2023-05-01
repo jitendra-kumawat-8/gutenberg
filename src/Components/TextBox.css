@@ -1,0 +1,45 @@
+.text-box{
+    caret-color: #5E56E7;
+    border:none;
+    padding: 0 10px;
+    width: 90%;
+    height: 40px;
+    background-color: #F0F0F6;
+    font-family: 'montserrat-regular';
+    font-size: 16px;
+}
+
+.text-box:focus{
+    outline: none;
+}
+
+.text-box:focus::placeholder{
+    opacity: 0;
+}
+.text-box-div:focus-within{
+    border: #5E56E7 1.5px solid;
+}
+
+input:not(:placeholder-shown) + #cancel-button{
+    display:initial;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+.text-box-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding-left:10px;
+    background-color: #F0F0F6;
+    margin: 10px 0px;
+    min-width: 200px;
+}
+
+#cancel-button{
+    display: none;
+    position: absolute;
+    right: 10px
+}
