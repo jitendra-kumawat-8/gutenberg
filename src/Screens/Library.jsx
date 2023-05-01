@@ -12,7 +12,7 @@ export default function Library() {
     const encodedQuery = encodeURIComponent(book); //encoding book name so it can be appended to the API
     queryClient.clear(); //clearing data cache
     setUrl( 
-      `http://gutendex.com/books?mime_type=image%2F&topic=${genre}&search=${encodedQuery}`
+      `https://gutendex.com/books?mime_type=image%2F&topic=${genre}&search=${encodedQuery}`
     ); //setURL method to update API endpoint with new genre and search term, trigger refetch again.
   };
 
@@ -23,7 +23,7 @@ export default function Library() {
 
   const genre = location.state.genre; //storing data passed from previous page
   const [url, setUrl] = useState(
-    `http://gutendex.com/books?mime_type=image%2F&topic=${genre}`
+    `https://gutendex.com/books?mime_type=image%2F&topic=${genre}`
   ); // sets URL as soon as this screen is loaded 
   const {
     isLoading,
